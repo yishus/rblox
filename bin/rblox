@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require File.expand_path("../lib/rblox", __dir__)
+
+case ARGV.count
+when 0
+  Rblox.run_prompt
+when 1
+  Rblox.run_file(ARGV[0])
+else
+  Rblox.print_usage
+  exit(64)
+end
